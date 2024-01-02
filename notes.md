@@ -15,13 +15,31 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 tsc main.ts
 ```
+
 ### watch changes on file and recompile
 
 ```
 tsc main.ts -w
 ```
+
 ### init tsconfig.json
 
 ```
 tsc --init
 ```
+### ignore ts files outside of src folder
+
+```
+{
+  "compilerOptions": {
+    ...
+  },
+  "include": [
+    "src"
+  ]
+}
+
+```
+
+
+`if you remove ts file, js file is not remove`
