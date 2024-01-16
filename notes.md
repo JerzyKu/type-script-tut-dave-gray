@@ -43,3 +43,12 @@ tsc --init
 
 
 `if you remove ts file, js file is not remove`
+
+
+
+
+
+npm create vite@latest
+
+
+
