@@ -1,5 +1,6 @@
 import Counter from "./compinents/Counter";
 import Heading from "./compinents/Heading";
+import List from "./compinents/List";
 import Section from "./compinents/Section";
 
 import { useState } from "react";
@@ -15,6 +16,7 @@ function App() {
       <Section title='asfda'>bla bla </Section>
       {/* <Counter setCount={setCount} count={count}/> */}
       <Counter setCount={setCount} count={count}> Count is {count}</Counter>
+      <List items={["Coffee", "Tacos", "Code"]} render={(item: string) => <span className="bold ">{item}</span>}/>
     </>
   );
 }
