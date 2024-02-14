@@ -52,3 +52,4 @@ npm create vite@latest
 
 
 
+npx json-server -w data/products.json -p 3500
