@@ -23,7 +23,7 @@ const REDUCER_ACTION_TYPE = {
   SUBMIT: "SUBMIT",
 };
 
-export type ReductionActionType = typeof REDUCER_ACTION_TYPE;
+export type ReducerActionType = typeof REDUCER_ACTION_TYPE;
 
 export type ReducerAction = {
   type: string;
@@ -82,13 +82,7 @@ const reducer = (
       }
 
       return { ...state, cart: [...filteredCart, { ...itemExist, qty }] };
-      //   const updatedItem: CartItemType = {}
-
-      //   if (itemExist) {
-      //     return { ...state, cart: [...filteredCart, { ...itemExist, qty }] };
-      //   }
-      //   return { ...state };
-    }
+  }
 
     case REDUCER_ACTION_TYPE.SUBMIT: {
       return { ...state, cart: [] };
