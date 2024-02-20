@@ -44,10 +44,13 @@ const reducer = (
         (item) => item.sku !== sku
       );
 
-      const itemExist: CartItemType | undefined = filteredCart.find(
-        (item) => item.sku === sku
-      );
+      const itemExist: CartItemType | undefined = state.cart.find(item => item.sku === sku);
       const qty: number = itemExist ? itemExist.qty + 1 : 1;
+
+      console.log('qty', qty);
+      console.log('itemExist', itemExist);
+      console.log('filteredCart', filteredCart);
+      
       return { ...state, cart: [...filteredCart, { sku, qty, name, price }] };
     }
 
@@ -73,7 +76,7 @@ const reducer = (
         (item) => item.sku !== sku
       );
 
-      const itemExist: CartItemType | undefined = filteredCart.find(
+      const itemExist: CartItemType | undefined = state.cart.find(
         (item) => item.sku === sku
       );
 

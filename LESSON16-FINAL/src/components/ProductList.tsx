@@ -6,7 +6,7 @@ import Product from "./Product";
 const ProductList = () => {
   const { dispatch, REDUCER_ACTIONS, cart } = useCart();
   const { products } = useProducts();
-  console.log(products);
+//   console.log(products);
   
 
   let pageContent: ReactElement | ReactElement[] = <p>Loading...</p>;

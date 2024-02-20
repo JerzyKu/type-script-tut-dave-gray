@@ -16,7 +16,7 @@ const Product = ({
   inCart,
 }: PropsType): ReactElement => {
   const img: string = new URL(`../images/${product.sku}.jpg`, import.meta.url).href;
-  console.log(img);
+//   console.log(img);
 
   const onAddToCart = () =>
     dispatch({ type: REDUCER_ACTIONS.ADD, payload: { ...product, qty: 1 } });

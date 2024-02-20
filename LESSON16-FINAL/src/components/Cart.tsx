@@ -7,6 +7,9 @@ const Cart = () => {
 
   const { dispatch, REDUCER_ACTIONS, totalItems, totalPrice, cart } = useCart();
 
+//   console.log('cart', cart);
+  
+
   const onSubmitOrder = () => {
     dispatch({ type: REDUCER_ACTIONS.SUBMIT });
     setConfirm(true);

@@ -26,11 +26,13 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
     );
   });
 
-  const onChangeQty = (e: ChangeEvent<HTMLSelectElement>) =>
+  const onChangeQty = (e: ChangeEvent<HTMLSelectElement>) =>{
+    console.log('qty', Number(e.target.value));
+    
     dispatch({
       type: REDUCER_ACTIONS.QUANTITY,
       payload: { ...item, qty: Number(e.target.value) },
-    });
+    });}
 
   const onRemoveFromCart = () =>
     dispatch({ type: REDUCER_ACTIONS.REMOVE, payload: item });
@@ -38,17 +40,17 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
   const content = (
     <li className="cart__item">
       <img src={img} alt={item.name} className="cart__img" />
-      <div className="" aria-label="Item Name">
+      <div aria-label="Item Name">
         {item.name}
       </div>
-      <div className="" aria-label="Price Per Item">
+      <div aria-label="Price Per Item">
         {new Intl.NumberFormat("en-US", {
           style: "currency",
           currency: "USD",
         }).format(item.price)}
       </div>
 
-      <label htmlFor="itemQty" className="offcreen">
+      <label htmlFor="itemQty" className="offscreen">
         Item Quantity
       </label>
       <select
